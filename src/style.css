@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "MaruBuri-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(26, 26, 26);
+  color: white;
+  text-align: center;
+}
+
+.font {
+  font-family: "MaruBuri-Regular";
+}
+
+.button {
+  background-color: #d3e2ff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.license {
+  color: gray;
+  font-size: 75%;
+}
+
+.input {
+  border-radius: 15px;
+  padding: 5px;
+  margin-bottom: 3px;
+  border: none;
+}
+
+.navbar {
+  width: 250px;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.home {
+  max-width: 350px;
+  margin: auto;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.postInput {
+  width: 250px;
+}
+
+.postButton {
+  text-align: end;
+}
+
+.posting {
+  background-color: rgb(35, 35, 35);
+  margin: 11px;
+  padding: 1px;
+  border-radius: 10px;
+}

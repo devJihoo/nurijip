@@ -6,9 +6,11 @@ const Profile = () => {
     authService.signOut();
   };
   return (
-    <>
-      <button onClick={onLogOutClick}>Sign Out</button>
-    </>
+    <div className="padding">
+      <button className="button" onClick={onLogOutClick}>
+        Sign Out
+      </button>
+    </div>
   );
 };
 

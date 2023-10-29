@@ -51,38 +51,56 @@ const Auth = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <input
-          name="email"
-          type="email"
-          placeholder="E-mail"
-          required
-          value={email}
-          onChange={onChange}
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="password"
-          required
-          value={password}
-          onChange={onChange}
-        />
-        <input
-          type="submit"
-          value={newAccount ? "Create Account" : "Sign in"}
-        />
-      </form>
-      <span>{errorMessage}</span>
-      <br />
-      <span onClick={toggleAccount}>{newAccount ? "Sign In" : "Sign Up"}</span>
-      <div>
-        <button name="google" onClick={onSocialClick}>
+    <>
+      <h1>2 - 7 누리집</h1>
+      <div className="padding">
+        <form onSubmit={onSubmit}>
+          <div>
+            <input
+              className="input"
+              name="email"
+              type="email"
+              placeholder="E-mail"
+              required
+              value={email}
+              onChange={onChange}
+            />
+            <br />
+            <input
+              className="input"
+              name="password"
+              type="password"
+              placeholder="password"
+              required
+              value={password}
+              onChange={onChange}
+            />
+          </div>
+          <input
+            className="button"
+            type="submit"
+            value={newAccount ? "Create Account" : "Sign in"}
+          />
+        </form>
+        <p>or</p>
+        <button className="button" name="google" onClick={onSocialClick}>
           Continue with Google
         </button>
+        <br />
+        <span>{errorMessage}</span>
+        <br />
+        <div style={{ margin: "20px" }}>
+          <span>
+            {newAccount
+              ? "이미 계정이 있으신가요? "
+              : "아직 계정이 없으신가요? "}
+          </span>
+          <span className="button" onClick={toggleAccount}>
+            {newAccount ? "Sign In" : "Sign Up"}
+          </span>{" "}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

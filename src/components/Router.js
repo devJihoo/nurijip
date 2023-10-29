@@ -5,8 +5,10 @@ import Home from "routes/Home";
 import Navigation from "components/Navigation";
 import Profile from "routes/Profile";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import Post from "routes/Post";
+import EachPost from "routes/EachPost";
 
-function AppRouter({ isLoggedIn }) {
+function AppRouter({ isLoggedIn, userObject }) {
   return (
     <Router>
       {isLoggedIn && <Navigation />}
@@ -18,6 +20,12 @@ function AppRouter({ isLoggedIn }) {
             </Route>
             <Route exact path="/profile">
               <Profile />
+            </Route>
+            <Route exact path="/post">
+              <Post userObject={userObject} />
+            </Route>
+            <Route exact path="/board/:id">
+              <EachPost />
             </Route>
             <Redirect from="*" to="/" />
           </>
